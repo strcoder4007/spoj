@@ -1,0 +1,20 @@
+def isint(x):
+	try:
+		a = int(x)
+	except ValueError:
+		return False
+	return True
+        
+t = int(input())
+while t>0:
+	t -= 1
+	_ = input()
+	strn = input().replace(" ", "")
+	str1, strn2 = strn.split("+")
+	str2, str3 = strn2.split("=")
+	if isint(str1) and isint(str2) and not isint(str3):
+		print("{} + {} = {}".format(int(str1), int(str2), int(str1)+int(str2)))
+	elif isint(str1) and not isint(str2) and isint(str3):
+		print("{} + {} = {}".format(int(str1), abs(int(str3)-int(str1)), int(str3)))
+	else:
+		print("{} + {} = {}".format(abs(int(str3)-int(str2)), int(str2), int(str3)))

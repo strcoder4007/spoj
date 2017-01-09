@@ -1,0 +1,14 @@
+t = int(input())
+while t>0:
+	t -= 1
+	x = input()
+	n = int(input())
+	k = n
+	summ = 0
+	while k>0:
+		k -= 1
+		summ += int(input())
+	if summ%n == 0:
+		print("YES")
+	else:
+		print("NO")

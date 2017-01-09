@@ -1,0 +1,14 @@
+t = int(input())
+while(t):
+    t = t-1
+    cnt = 0
+    mylist = list(map(int, input().split()))
+    n, k, m = mylist[0], mylist[1], mylist[2]
+    summ = n
+    while(summ < m):
+        summ *= k
+        cnt = cnt+1
+    if(summ == m):
+        print(cnt)
+    else:
+        print(max(cnt-1, 0))

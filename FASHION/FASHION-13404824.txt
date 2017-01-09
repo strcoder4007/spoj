@@ -1,0 +1,12 @@
+t = int(input())
+while t>0:
+	 t-= 1
+	 mul = 0
+	 n = int(input())
+	 list1 = list(map(int, input().split()))
+	 list2 = list(map(int, input().split()))
+	 list1.sort()
+	 list2.sort()
+	 for i in range(0, n, 1):
+	 	mul += list1[i]*list2[i]
+	 print(mul)

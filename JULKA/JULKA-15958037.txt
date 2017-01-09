@@ -1,0 +1,7 @@
+t=10
+while t>0:
+    total=int(raw_input())
+    howmanymore=int(raw_input())
+    print total - ((total-howmanymore)/2)
+    print (total-howmanymore)/2
+    t-=1

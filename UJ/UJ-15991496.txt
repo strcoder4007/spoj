@@ -1,0 +1,6 @@
+while 1:
+    mylist = list(map(int, input().split()))
+    if(mylist[0] == 0):
+        break
+    else:
+        print(mylist[0]**mylist[1])

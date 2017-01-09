@@ -1,0 +1,16 @@
+import re
+t = int(input())
+while t>0:
+	t -= 1
+	c = int(input())
+	s = input()
+	# TTT, TTH, THT, THH, HTT, HTH, HHT, HHH
+	print(c, end = ' ')
+	print(len(re.findall('(?=TTT)', s)), end = ' ')
+	print(len(re.findall('(?=TTH)', s)), end = ' ')
+	print(len(re.findall('(?=THT)', s)), end = ' ')
+	print(len(re.findall('(?=THH)', s)), end = ' ')
+	print(len(re.findall('(?=HTT)', s)), end = ' ')
+	print(len(re.findall('(?=HTH)', s)), end = ' ')
+	print(len(re.findall('(?=HHT)', s)), end = ' ')
+	print(len(re.findall('(?=HHH)', s)))

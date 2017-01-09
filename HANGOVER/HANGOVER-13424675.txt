@@ -1,0 +1,9 @@
+t = float(input())
+while t != 0.00:
+	summ = 0
+	for i in range(2, 275, 1):
+		summ += 1/i
+		if summ >= t:
+			break
+	print("{} card(s)".format(i-1))
+	t = float(input())

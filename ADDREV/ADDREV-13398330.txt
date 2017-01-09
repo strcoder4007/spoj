@@ -1,0 +1,11 @@
+def joined(mylist):
+    return int(''.join(i for i in mylist))
+t = int(input())
+while t>0:
+    t-=1
+    n,m = input().split()
+    n = list(reversed(n))
+    m = list(reversed(m))
+    summ = joined(n) + joined(m)
+    x = list(reversed(str(summ)))
+    print(joined(x))

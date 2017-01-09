@@ -1,0 +1,6 @@
+t = int(input())
+while t>0:
+	t -= 1
+	n = int(input())
+	res = n*(n+1) + (n*(n-1))/2
+	print(int(res)%1000007)

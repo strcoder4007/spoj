@@ -1,0 +1,36 @@
+import re
+while 1:
+    a=[]
+    s=[]
+    b=input()
+    if b==0:
+        break
+    else:
+        p=1
+        for x in re.sub("[^\w]"," ",raw_input()).split():
+            a.append(int(x))        
+        
+        s.append(a[0])
+        
+        for i in range(1 , b ):
+            k=len(s)
+            while a[i]>s[k-1] and s[k-1]==p:
+                s.pop()
+                p+=1
+                k=len(s)
+                if k==0:
+                    break
+            s.append(a[i])
+        
+        k=len(s)    
+        while s[k-1]==p:
+            s.pop()
+            p+=1
+            k=len(s)
+            if k==0:
+                break
+    
+        if len(s)==0:
+            print "yes"
+        else:
+            print "no"

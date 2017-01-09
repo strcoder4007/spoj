@@ -1,0 +1,8 @@
+c = 1
+t = int(input())
+while t>0:
+	t -= 1
+	n = float(input())
+	k = (4*(n**2))+0.25
+	print("Case {}: {}".format(c, k))
+	c += 1
